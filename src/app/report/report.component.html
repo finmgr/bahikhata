@@ -1,0 +1,46 @@
+
+<form class="example-form">
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Search Item</mat-label>
+    <input type="text"
+           placeholder="Enter Item"
+           matInput [formControl]="item"
+           [matAutocomplete]="auto">
+    <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+      <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+        {{option}}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+</form>
+
+
+  <button (click) = "getItems()" mat-raised-button color="primary">Search</button>
+ 
+  <button (click) = "goBackToList()" mat-stroked-button color="primary">Cancel</button>
+
+  <mat-divider></mat-divider>
+
+  <mat-toolbar color="primary">
+
+    <mat-toolbar-row>
+      <span>Total Expense</span>
+      <span class="flex-spacer">
+        {{totalExpense  | number:'1.0-2'}}
+      </span>
+     
+    </mat-toolbar-row>
+  
+  </mat-toolbar>
+  <mat-list *ngFor="let expense of expenses">
+      
+      <mat-list-item>
+        <mat-icon matListItemIcon>
+          receipt_long</mat-icon>
+        <div matListItemTitle>{{expense.name}}</div>
+        <div matListItemLine>{{expense.amount}}</div>
+        <div matListItemLine>{{expense.date | date}}</div>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      
+    </mat-list>

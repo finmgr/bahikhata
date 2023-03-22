@@ -1,0 +1,21 @@
+<div class="login-container">
+    <h1>Register New Home</h1>
+<form>
+    <mat-form-field>
+      <mat-label>House Id</mat-label>
+      <input matInput type="username" name="username" [(ngModel)]="value.houseid" required>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Password</mat-label>
+      <input matInput type="password" name="password" [(ngModel)]="value.password" required>
+    </mat-form-field>
+    <mat-form-field [ngClass]="{'mat-form-field-invalid': !passwordsMatch()}">
+      <mat-label>Confirm Password</mat-label>
+      <input matInput type="password" name="confirmPassword"  [(ngModel)]="confirmPassword" required>
+      <mat-error *ngIf="!passwordsMatch()">Passwords do not match</mat-error>
+    </mat-form-field>
+    <mat-error *ngIf="error">{{error}}</mat-error>
+    <button (click)="onSubmit()" mat-raised-button color="primary">Register</button>
+    <button (click)="navigateToLogin()" class="loginButton">Sign In</button>
+  </form>
+  </div>

@@ -1,0 +1,25 @@
+<mat-toolbar color="primary">
+
+  <mat-toolbar-row>
+    <span>Total Expense</span>
+    <span class="flex-spacer">
+      {{totalExpense | number:'1.0-2'}}
+    </span>
+    <mat-icon (click)="navigateToReport()"  class="example-icon" aria-hidden="false" aria-label="Example user verified icon">
+      data_thresholding
+      </mat-icon>
+  </mat-toolbar-row>
+
+</mat-toolbar>
+<mat-list *ngFor="let expense of expenses">
+    
+    <mat-list-item>
+      <mat-icon matListItemIcon>
+        receipt_long</mat-icon>
+      <div matListItemTitle>{{expense.name}}</div>
+      <div matListItemLine>{{expense.amount}}</div>
+      <div matListItemLine>{{expense.date | date}}</div>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+    
+  </mat-list>
