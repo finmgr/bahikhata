@@ -11,18 +11,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 //import { ServiceWorkerModule } from '@angular/service-worker';
 import { ReportComponent } from './report/report.component';
 import { AddCategoryComponent } from './add-category/add-category.component';
-import { LoginHomeComponent } from './login-home/login-home.component';
-import { RegisterHomeComponent } from './register-home/register-home.component';
-import { MyHttpInterceptor } from './http-interceptor.service';
 @NgModule({
   declarations: [
     AppComponent,
     ListComponent,
     AddItemComponent,
     ReportComponent,
-    AddCategoryComponent,
-    LoginHomeComponent,
-    RegisterHomeComponent
+    AddCategoryComponent
   ],
   imports: [
     BrowserModule,
@@ -39,11 +34,7 @@ import { MyHttpInterceptor } from './http-interceptor.service';
     //   registrationStrategy: 'registerWhenStable:30000'
     // })
   ],
-  providers: [{
-    provide: HTTP_INTERCEPTORS,
-    useClass: MyHttpInterceptor,
-    multi: true,
-  },],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
