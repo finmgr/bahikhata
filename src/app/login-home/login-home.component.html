@@ -1,0 +1,19 @@
+<div class="login-container">
+    <h1>Login</h1>
+    <form>
+        <mat-form-field>
+          <mat-label>House Id</mat-label>
+          <input matInput type="username" name="username" [(ngModel)]="value.houseid" required>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Password</mat-label>
+          <input matInput type="password" name="password" [(ngModel)]="value.password" required>
+        </mat-form-field>
+        
+        
+      
+  
+        <button (click)="onSubmit()" mat-raised-button color="primary">Login</button>
+      <button (click)="navigateToRegister()" class="registerbutton">Register Home</button>
+    </form>
+  </div>
