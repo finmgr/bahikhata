@@ -14,6 +14,7 @@ import { AddCategoryComponent } from './add-category/add-category.component';
 import { LoginHomeComponent } from './login-home/login-home.component';
 import { RegisterHomeComponent } from './register-home/register-home.component';
 import { MyHttpInterceptor } from './http-interceptor.service';
+import { BottomSheetOverviewSheet } from './bottom-sheet-overview-sheet/bottom-sheet-overview-sheet.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +23,8 @@ import { MyHttpInterceptor } from './http-interceptor.service';
     ReportComponent,
     AddCategoryComponent,
     LoginHomeComponent,
-    RegisterHomeComponent
+    RegisterHomeComponent,
+    BottomSheetOverviewSheet
   ],
   imports: [
     BrowserModule,

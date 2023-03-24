@@ -1,16 +1,15 @@
 <mat-toolbar color="primary">
 
   <mat-toolbar-row>
-    <span>Total Expense</span>
-    <span class="flex-spacer">
-      {{totalExpense | number:'1.0-2'}}
-    </span>
-    <mat-icon (click)="navigateToReport()"  class="example-icon" aria-hidden="false" aria-label="Example user verified icon">
-      data_thresholding
-      </mat-icon>
+    <span style="flex: 1 1 auto;"></span>
+    <span style="flex: 0 0 auto;">Total: {{totalExpense | number:'1.0-2'}}</span>
+    
+    <span style="flex: 1 1 auto;"></span>
+    
   </mat-toolbar-row>
 
 </mat-toolbar>
+
 <mat-list *ngFor="let expense of expenses">
     
     <mat-list-item>
@@ -23,3 +22,6 @@
     <mat-divider></mat-divider>
     
   </mat-list>
+  <button (click)="openBottomSheet()" mat-fab class="fixed-bottom-right" matTooltip="My Button">
+    <mat-icon>menu</mat-icon>
+  </button>

@@ -1,7 +1,7 @@
 
 <form class="example-form">
   <mat-form-field class="example-full-width" appearance="fill">
-    <mat-label>Search Item</mat-label>
+    <mat-label>Enter or Search Expense Name</mat-label>
     <input type="text"
            placeholder="Enter Item"
            matInput [formControl]="item"
@@ -13,25 +13,23 @@
     </mat-autocomplete>
   </mat-form-field>
 </form>
+<div class="fin-button-container" style="margin-bottom: 20px;">
 
-
-  <button (click) = "getItems()" mat-raised-button color="primary">Search</button>
+  <button class="fin-action-button" (click) = "getItems()" mat-raised-button color="primary">Search</button>
  
-  <button (click) = "goBackToList()" mat-stroked-button color="primary">Cancel</button>
-
+  <button  class="fin-action-button" (click) = "goBackToList()" mat-stroked-button color="primary">Cancel</button>
+</div>
   <mat-divider></mat-divider>
 
-  <mat-toolbar color="primary">
+  <mat-toolbar color="accent">
 
     <mat-toolbar-row>
-      <span>Total Expense</span>
-      <span class="flex-spacer">
-        {{totalExpense  | number:'1.0-2'}}
-      </span>
-     
+      <span style="flex: 1 1 auto;"></span>
+      <span style="flex: 0 0 auto;">Total: {{totalExpense | number:'1.0-2'}}</span>
+      
+      <span style="flex: 1 1 auto;"></span>
+      
     </mat-toolbar-row>
-  
-  </mat-toolbar>
   <mat-list *ngFor="let expense of expenses">
       
       <mat-list-item>

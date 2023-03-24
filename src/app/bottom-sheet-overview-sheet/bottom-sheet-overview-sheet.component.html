@@ -1,0 +1,27 @@
+<mat-nav-list class="fin-bg-color">
+    <a href="https://keep.google.com/" mat-list-item (click)="openLink('add')">
+      <span matListItemTitle>Add Expense</span>
+      <span matLine>Add an expense</span>
+    </a>
+  
+    <a href="https://docs.google.com/" mat-list-item (click)="openLink('category')">
+      <span matListItemTitle>Category</span>
+      <span matLine>Add and manage expense category</span>
+    </a>
+  
+    <a href="https://plus.google.com/" mat-list-item (click)="openLink($event)">
+      <span matListItemTitle>Wishlist</span>
+      <span matLine>Add and manage items in your wishlist</span>
+    </a>
+    <a href="https://plus.google.com/" mat-list-item (click)="openLink('report')">
+        <span matListItemTitle>Report</span>
+        <span matLine>View report for your specific expense</span>
+      </a>
+      <a href="https://plus.google.com/" mat-list-item (click)="openLink($event)">
+        <span matListItemTitle>Past Expense</span>
+        <span matLine>View your past months expense</span>
+      </a>
+  
+  </mat-nav-list>
+  
+  
