@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  //backend_url: "http://localhost:3000"
-  backend_url: "https://finmgr-ms-bahikhata.vercel.app"
+  backend_url: "http://localhost:3000"
+  //backend_url: "https://finmgr-ms-bahikhata.vercel.app"
 };
 
 

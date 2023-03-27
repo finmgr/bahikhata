@@ -10,7 +10,7 @@
 
 </mat-toolbar>
 
-<mat-list *ngFor="let expense of expenses">
+<mat-list (click)="expenseOpened(expense)" *ngFor="let expense of expenses">
     
     <mat-list-item>
       <mat-icon matListItemIcon>
