@@ -22,10 +22,13 @@
     "@angular/pwa": "^15.2.0",
     "@angular/router": "15.2.3",
     "@angular/service-worker": "^15.2.0",
+    "@capacitor-community/fcm": "^3.0.2",
     "@capacitor/android": "^4.7.1",
     "@capacitor/angular": "^2.0.3",
     "@capacitor/cli": "^4.7.0",
     "@capacitor/core": "^4.7.0",
+    "@capacitor/push-notifications": "^4.1.2",
+    "firebase": "^9.18.0",
     "rxjs": "~7.4.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"

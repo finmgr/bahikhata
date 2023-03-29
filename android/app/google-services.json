@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "904064156101",
+    "project_id": "finmgr-7ace4",
+    "storage_bucket": "finmgr-7ace4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:904064156101:android:3b5f8d4202e998acc1cbac",
+        "android_client_info": {
+          "package_name": "com.abhiyukti.bahikhata"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "904064156101-92i405mgsjiae532r7a0r0btt3iq1kf1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJ51F9Z55aodHRXCEhnrsj-aTF8LmCbHg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "904064156101-92i405mgsjiae532r7a0r0btt3iq1kf1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
