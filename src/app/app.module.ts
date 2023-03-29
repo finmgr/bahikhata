@@ -14,6 +14,9 @@ import { AddCategoryComponent } from './add-category/add-category.component';
 import { LoginHomeComponent } from './login-home/login-home.component';
 import { RegisterHomeComponent } from './register-home/register-home.component';
 import { MyHttpInterceptor } from './http-interceptor.service';
+import { BottomSheetOverviewSheet } from './bottom-sheet-overview-sheet/bottom-sheet-overview-sheet.component';
+import { PushNotifications } from '@capacitor/push-notifications';
+import { FCM } from '@capacitor-community/fcm';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +25,8 @@ import { MyHttpInterceptor } from './http-interceptor.service';
     ReportComponent,
     AddCategoryComponent,
     LoginHomeComponent,
-    RegisterHomeComponent
+    RegisterHomeComponent,
+    BottomSheetOverviewSheet
   ],
   imports: [
     BrowserModule,
@@ -39,11 +43,13 @@ import { MyHttpInterceptor } from './http-interceptor.service';
       registrationStrategy: 'registerWhenStable:30000'
     })
   ],
-  providers: [{
+  providers: [
+    {
     provide: HTTP_INTERCEPTORS,
     useClass: MyHttpInterceptor,
     multi: true,
-  },],
+  },
+],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
