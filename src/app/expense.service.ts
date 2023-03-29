@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { House } from './House';
+import { Expense } from './list/Expense';
 
 @Injectable({
   providedIn: 'root'
@@ -34,6 +35,15 @@ export class ExpenseService {
   loginUser(data: House){
     const url = environment.backend_url + '/login';
     return this.http.post(url,data);
+  }
+  deleteItem(id: any){
+    const url = environment.backend_url + '/expense/' + id;
+    return this.http.delete(url);
+  }
+
+  updateItem(id: any, value : Expense){
+    const url = environment.backend_url + '/expense/' + id;
+    return this.http.put(url,value);
   }
 
   searchItem(itemName: string): Observable<any>{

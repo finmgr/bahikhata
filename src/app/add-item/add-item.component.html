@@ -26,7 +26,9 @@
   <mat-datepicker #picker></mat-datepicker>
 </mat-form-field>
 <div class="fin-button-container">
-  <button (click) = "saveItem()" class="fin-action-button" mat-raised-button color="primary">Save</button>
+  <button (click) = "submit()" class="fin-action-button" mat-raised-button color="primary">{{primaryAction}}</button>
+  <button *ngIf="secondaryAction" (click) = "delete()" class="fin-action-button" mat-raised-button color="warn">Delete</button>
  
   <button (click) = "goBackToList()" class="fin-action-button" mat-stroked-button color="primary">Cancel</button>
+  
   </div>

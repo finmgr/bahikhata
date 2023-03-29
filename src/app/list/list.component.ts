@@ -25,7 +25,7 @@ export class ListComponent  implements OnInit{
    
   }
   expenseOpened(data: Expense){
-    console.log(data)
+    this.router.navigate(['/edit'], { state: data });
   }
   navigateToReport(){
     this.router.navigate(['/report'] );
