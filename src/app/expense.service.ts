@@ -18,6 +18,10 @@ export class ExpenseService {
     const url = environment.backend_url + '/expense';
     return this.http.get(url);
   }
+  getHistoryExpense(startDate:string, endDate:string): Observable<any>{
+    const url = environment.backend_url + '/expense/'+startDate+'/'+endDate;
+    return this.http.get(url);
+  }
 
   getAllCategory(): Observable<any>{
     const url = environment.backend_url + '/category';

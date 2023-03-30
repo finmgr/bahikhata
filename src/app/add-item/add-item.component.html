@@ -23,7 +23,7 @@
   <input matInput [matDatepicker]="picker" [(ngModel)]="value.date">
   
   <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
-  <mat-datepicker #picker></mat-datepicker>
+  <mat-datepicker touchUi #picker></mat-datepicker>
 </mat-form-field>
 <div class="fin-button-container">
   <button (click) = "submit()" class="fin-action-button" mat-raised-button color="primary">{{primaryAction}}</button>

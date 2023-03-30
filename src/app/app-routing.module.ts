@@ -5,6 +5,7 @@ import { AddItemComponent } from './add-item/add-item.component';
 import { AuthGuard } from './Auth.service';
 import { ListComponent } from './list/list.component';
 import { LoginHomeComponent } from './login-home/login-home.component';
+import { PastExpenseComponent } from './past-expense/past-expense.component';
 import { RegisterHomeComponent } from './register-home/register-home.component';
 import { ReportComponent } from './report/report.component';
 
@@ -15,7 +16,8 @@ const routes: Routes = [
   {path: 'add', component: AddItemComponent, canActivate: [AuthGuard]},
   {path: 'edit', component: AddItemComponent, canActivate: [AuthGuard]},
   {path: 'report', component:ReportComponent,canActivate: [AuthGuard]},
-  {path: 'category', component:AddCategoryComponent,canActivate: [AuthGuard]}
+  {path: 'category', component:AddCategoryComponent,canActivate: [AuthGuard]},
+  {path: 'history', component:PastExpenseComponent,canActivate: [AuthGuard]}
 ];
 
 @NgModule({

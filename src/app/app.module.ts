@@ -17,6 +17,7 @@ import { MyHttpInterceptor } from './http-interceptor.service';
 import { BottomSheetOverviewSheet } from './bottom-sheet-overview-sheet/bottom-sheet-overview-sheet.component';
 import { PushNotifications } from '@capacitor/push-notifications';
 import { FCM } from '@capacitor-community/fcm';
+import { PastExpenseComponent } from './past-expense/past-expense.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +27,8 @@ import { FCM } from '@capacitor-community/fcm';
     AddCategoryComponent,
     LoginHomeComponent,
     RegisterHomeComponent,
-    BottomSheetOverviewSheet
+    BottomSheetOverviewSheet,
+    PastExpenseComponent
   ],
   imports: [
     BrowserModule,

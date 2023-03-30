@@ -12,7 +12,6 @@ export class BottomSheetOverviewSheet {
   openLink(event: any): void {
     this._bottomSheetRef.dismiss();
     this.router.navigate(['/'+event] );
-    event.preventDefault();
 
   }
 }

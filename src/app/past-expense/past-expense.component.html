@@ -1,0 +1,46 @@
+
+<form [formGroup]="value"><mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Start Date</mat-label>
+<input matInput [matDatepicker]="spicker" [max]="currrentData" formControlName="startDate">
+
+<mat-datepicker-toggle matIconSuffix [for]="spicker"></mat-datepicker-toggle>
+<mat-datepicker touchUi  #spicker></mat-datepicker>
+</mat-form-field>
+<mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>End Date</mat-label>
+<input matInput [matDatepicker]="epicker"  [min]="value.value.startDate" [max]="currrentData" formControlName="endDate">
+
+<mat-datepicker-toggle matIconSuffix [for]="epicker"></mat-datepicker-toggle>
+<mat-datepicker touchUi #epicker></mat-datepicker>
+</mat-form-field>
+</form>
+<div class="fin-button-container" style="margin-bottom: 20px;">
+
+    <button class="fin-action-button" (click) = "getItems()" mat-raised-button color="primary">Search</button>
+   
+    <button  class="fin-action-button" (click) = "goBackToList()" mat-stroked-button color="primary">Cancel</button>
+  </div>
+    <mat-divider></mat-divider>
+  
+    <mat-toolbar color="accent">
+  
+      <mat-toolbar-row>
+        <span style="flex: 1 1 auto;"></span>
+        <span style="flex: 0 0 auto;">Total: {{totalExpense | number:'1.0-2'}}</span>
+        
+        <span style="flex: 1 1 auto;"></span>
+        
+      </mat-toolbar-row>
+      </mat-toolbar>
+    <mat-list *ngFor="let expense of expenses">
+        
+        <mat-list-item>
+          <mat-icon matListItemIcon>
+            receipt_long</mat-icon>
+          <div matListItemTitle>{{expense.name}}</div>
+          <div matListItemLine>{{expense.amount}}</div>
+          <div matListItemLine>{{expense.date | date}}</div>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+        
+      </mat-list>
