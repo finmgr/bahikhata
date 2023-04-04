@@ -71,12 +71,13 @@ export class AddItemComponent implements OnInit {
       this.value.name = this.item.value;
       this.service.save(this.value).subscribe(res=>{
         console.log(res);
+        this.router.navigate(["/dashboard"]);
         
       })
     }
    
    
-    this.router.navigate(["/dashboard"]);
+    
   }
   submit(){
     if(this.primaryAction == 'Update'){
