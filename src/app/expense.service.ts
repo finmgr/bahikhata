@@ -27,6 +27,10 @@ export class ExpenseService {
     const url = environment.backend_url + '/category';
     return this.http.get(url);
   }
+  addToken(houseid: string, token:string) : Observable<any>{
+    const url = environment.backend_url+'/token/'+houseid+'/'+token;
+    return this.http.get(url);
+  }
   
   save(data: any): Observable<any>{
     const url = environment.backend_url + '/expense';
